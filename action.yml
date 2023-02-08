@@ -1,11 +1,14 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Colin Forster'
+description: 'git diff of folders'
+author: 'col inc'
 inputs:
-  milliseconds: # change this
+  folders:
+    description: 'list of fodlers to check for changes'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    default: 'extensions, services, migrations'
+outputs:
+  to_build:
+    description: 'json object of which apps to build'
 runs:
   using: 'node16'
   main: 'dist/index.js'

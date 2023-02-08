@@ -25,7 +25,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.0"
+    "@actions/core": "^1.10.0",
+    "async-shelljs": "^0.1.4"
   },
   "devDependencies": {
     "@types/node": "^18.11.0",
