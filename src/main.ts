@@ -2,7 +2,7 @@ import * as core from '@actions/core'
 import * as fs from 'fs'
 import { exec } from 'async-shelljs'
 
-const folderstoCheck = core.getInput("folders")
+const folderstoCheck = core.getInput("folders").split(",")
 const isBackend = (n: string) => !(n.endsWith('portal') || n == 'va-customer')
 const compareItems = (a: Item, b: Item) =>  
   a.TYPE == b.TYPE && a.IMAGE_NAME == b.IMAGE_NAME
