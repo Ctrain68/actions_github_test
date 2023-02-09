@@ -56,7 +56,7 @@ const run = (folders) => {
         allFolders.push(...mapped);
     }
     let unchanged = allFolders.filter(a => !changed.find(x => compareItems(a, x)));
-    return [changed, unchanged];
+    return [{ changed }, { unchanged }];
 };
 let blah = run(folderstoCheck);
 console.log('Folders that have changed to be built');

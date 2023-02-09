@@ -47,7 +47,7 @@ const run = (folders: string[]) => {
   )
 
 
-  return [changed, unchanged]
+  return [{changed}, {unchanged}]
 }
 
 let blah = run(folderstoCheck)
