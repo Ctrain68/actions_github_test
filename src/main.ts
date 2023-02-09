@@ -46,7 +46,6 @@ const run = (folders: string[]) => {
     a => !changed.find(x => compareItems(a, x))
   )
 
-  console.log([changed, unchanged])
 
   return [changed, unchanged]
 }
@@ -54,7 +53,12 @@ const run = (folders: string[]) => {
 let blah = run(folderstoCheck)
 
 
+console.log('Folders that have changed to be built')
 
 console.log(blah[0])
 
-core.setOutput('folder_output', blah )
+
+console.log('Folders that have not changed to be retagged')
+
+core.setOutput('to_build', blah[0] )
+core.setOutput('to_retag', blah[1] )

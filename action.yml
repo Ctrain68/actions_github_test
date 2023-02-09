@@ -9,6 +9,8 @@ inputs:
 outputs:
   to_build:
     description: 'json object of which apps to build'
+  to_retag:
+    description: 'json object of which apps to retag'
 runs:
   using: 'node16'
   main: 'dist/index.js'
