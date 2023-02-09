@@ -57,8 +57,16 @@ console.log('Folders that have changed to be built')
 
 console.log(blah[0])
 
+let output_1 = JSON.stringify(blah[0])
+
+let output_2 = JSON.stringify(blah[1])
 
 console.log('Folders that have not changed to be retagged')
 
-core.setOutput('to_build', blah[0] )
-core.setOutput('to_retag', blah[1] )
+console.log(output_1)
+
+console.log(output_2)
+
+
+core.setOutput('to_build', output_1 )
+core.setOutput('to_retag', output_2 )
