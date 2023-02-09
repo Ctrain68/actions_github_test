@@ -29,7 +29,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const fs = __importStar(__nccwpck_require__(5747));
 const async_shelljs_1 = __nccwpck_require__(6479);
-const folderstoCheck = core.getInput("folders");
+const folderstoCheck = core.getInput("folders").split(",");
 const isBackend = (n) => !(n.endsWith('portal') || n == 'va-customer');
 const compareItems = (a, b) => a.TYPE == b.TYPE && a.IMAGE_NAME == b.IMAGE_NAME;
 const run = (folders) => {
@@ -59,7 +59,7 @@ const run = (folders) => {
     console.log([changed, unchanged]);
     return [changed, unchanged];
 };
-let blah = run([folderstoCheck]);
+let blah = run(folderstoCheck);
 core.setOutput('folder_output', blah);
 
 
