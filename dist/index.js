@@ -60,6 +60,7 @@ const run = (folders) => {
     return [changed, unchanged];
 };
 let blah = run(folderstoCheck);
+console.log(blah[0]);
 core.setOutput('folder_output', blah);
 
 

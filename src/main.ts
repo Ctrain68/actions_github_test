@@ -53,4 +53,8 @@ const run = (folders: string[]) => {
 
 let blah = run(folderstoCheck)
 
+
+
+console.log(blah[0])
+
 core.setOutput('folder_output', blah )
